@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>New math quiz GAME</title>
+        <style>
+body {
+    text-align:center;
+}
+        </style>
+    </head>
+
+    <body>
+<h1>MATH QUIZ GAME</h1>
+<br>
+<span>
+    <h4 id = "p1">-- </h4>  
+    <h4 id = "p2"> --</h4>
+</span>
+<br>
+<br>
+<br>
+<br>
+<h4 id = "page">
+This is the page part. I will use this h4 tag to make it display stuff.
+</h4>
+<script>
+    var p1score = 0;
+    var p2score = 0;
+    var awnser = "";
+    var correctAwnser = 0;
+var player1 = localStorage.getItem("p1");
+var player2 = localStorage.getItem("p2");
+var questionTurn = player1;
+var awnserTurn = player2;
+document.getElementById("p1").innerHTML = player1 + ":" + p1score;
+document.getElementById("p2").innerHTML = player2 + ":" + p2score;
+function switchTurn() {
+    if (questionTurn = player1) {
+        questionTurn = player2;
+    }else {
+        questionTurn=player1;
+    }
+    if (awnserTurn = player1) {
+        awnserTurn = player2;
+    }else {
+        awnserTurn = player1;
+    }
+}
+</script>
+    </body>
+</html>
